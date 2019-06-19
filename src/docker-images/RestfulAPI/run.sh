@@ -11,5 +11,4 @@ apachectl start
 #sleep infinity
 while true; do
 	sleep 1800
-	#apachectl restart
 done
