@@ -17,6 +17,7 @@ logger = MyLogger()
 
 class DataHandler:
 
+
     def __init__(self):
         start_time = timeit.default_timer()
         self.database = "DLWSCluster-%s" % config["clusterId"]
@@ -31,11 +32,13 @@ class DataHandler:
         username = config["mysql"]["username"]
         password = config["mysql"]["password"]
 
+
         self.conn = mysql.connector.connect(user=username, password=password,
                                             host=server, database=self.database)
 
         self.CreateDatabase()
         self.CreateTable()
+
 
         elapsed = timeit.default_timer() - start_time
         logger.info("DataHandler initialization, time elapsed %f s" % elapsed)
